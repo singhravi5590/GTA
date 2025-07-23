@@ -1,12 +1,11 @@
 .nav-container{
-  margin-inline: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-inline: 20px;
   height: 50px;
   color: wheat;
-  background-image: linear-gradient(to right, rgb(0, 0, 0), gray);
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(53, 52, 52));
   background-color: black;
 }
 
