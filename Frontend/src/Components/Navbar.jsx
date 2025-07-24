@@ -11,7 +11,7 @@ const Navbar = () => {
             <a href="">Airport Transfer</a>
         </div>
         <div className='contact'>
-            <button href="">Contact Us</button>
+            <button href="#">Contact Us</button>
         </div>
     </div>
   )
