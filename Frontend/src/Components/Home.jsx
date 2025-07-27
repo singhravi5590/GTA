@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import images from '../assets/images.js'
+import {images, cardDetails} from '../assets/images.js'
+import swift from '../assets/swift.jpg'
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -34,11 +35,37 @@ const Home = () => {
   }, [index])
   
   return (
-    <div className='home-container'>
-        <div className='image-container'>
-          <img className='image' src={images[index].image} alt="ghat-images" />
-        </div>
-    </div>
+    <>
+      <div className='home-container'>
+          <div className='image-container'>
+            <img className='image' src={images[index].image} alt="ghat-images" />
+          </div>
+      </div>
+      <div className='card-container'>
+        {
+          cardDetails.map((item, index) => {
+            return (
+              <div className='card'>
+                <div className='inside-card'>
+                  <img className='card-image' height={200} width={260} src={item.img} alt="swift" />
+                  <div className='card-details'>
+                    <div><span>Vehicle Name</span> <span>:</span> <span>{item.name}</span></div>
+                    <div><span>Seat Capacity</span> <span>:</span> <span>{item.capacity}Persons</span></div>
+                    <div><span>Rate Per KM</span> <span>:</span> <span>{item.rate}Rs per Km</span></div>
+                    <div><span>Airport Transfer</span> <span>:</span> <span>{item.airport}Rs</span></div>
+                    <div className='button-container'>
+                      <button className='contact'>Contact us</button>
+                      <button className='book'>Book us</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          })
+        }
+        
+      </div>
+    </>
   )
 }
 
