@@ -5,6 +5,9 @@
 }
 
 .nav-container{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -120,4 +123,52 @@
   background-image: linear-gradient(to left,  rgb(0, 0, 0), rgb(53, 52, 52));
   color: rgb(239, 231, 226);
   border-top-left-radius: 10px;
+}
+
+.line{
+  height: 1px;
+  width: 100vw;
+  background-color: black;
+}
+
+.temple-container{
+  padding-block: 20px;
+  padding-inline: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: rgb(193, 208, 203);
+}
+
+.temple-card{
+  width: 420px;
+  border-radius: 20px;
+  padding: 9px 8px;
+  border: 1px solid black;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 30px;
+}
+
+.temple-card img {
+  width: 100%;           /* Makes image responsive inside card */
+  height: 220px;         /* Set fixed height for consistency */
+  object-fit: cover;     /* Ensures image fills area without distortion */
+  border-radius: 20px;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.temple-card p {
+  line-height: 16px;
+  font-size: small;
+}
+
+.card-data span{
+  background-color: rgb(45, 31, 6);
+  color: wheat;
+  padding: 2px;
+  border-radius: 5px;
+  cursor: pointer;
 }

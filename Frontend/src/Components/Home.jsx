@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import {images, cardDetails} from '../assets/images.js'
+import {images, cardDetails, templeDetails} from '../assets/images.js'
 import swift from '../assets/swift.jpg'
+import TempleCard from './TempleCard.jsx';
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -41,6 +42,17 @@ const Home = () => {
             <img className='image' src={images[index].image} alt="ghat-images" />
           </div>
       </div>
+
+      <div className='temple-container'>
+        {
+          templeDetails.map((item, index) => {
+            return <TempleCard details={item}/>
+          })
+        }
+      </div>
+
+      <div className='line'></div>
+
       <div className='card-container'>
         {
           cardDetails.map((item, index) => {
@@ -62,10 +74,9 @@ const Home = () => {
               </div>
             )
           })
-        }
-        
-        <hr />
+        }    
       </div>
+
     </>
   )
 }
