@@ -46,7 +46,7 @@ const Home = () => {
       <div className='temple-container'>
         {
           templeDetails.map((item, index) => {
-            return <TempleCard details={item}/>
+            return <TempleCard key={index} details={item}/>
           })
         }
       </div>
@@ -57,7 +57,7 @@ const Home = () => {
         {
           cardDetails.map((item, index) => {
             return (
-              <div className='card'>
+              <div key={index} className='card'>
                 <div className='inside-card'>
                   <img className='card-image' height={200} width={260} src={item.img} alt="swift" />
                   <div className='card-details'>
