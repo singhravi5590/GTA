@@ -52,6 +52,9 @@ const Home = () => {
       </div>
 
       <div className='line'></div>
+      <div className='line'></div>
+      <div className='line'></div>
+
 
       <div className='card-container'>
         {
@@ -76,6 +79,10 @@ const Home = () => {
           })
         }    
       </div>
+
+
+      <div className='line'></div>
+
 
     </>
   )
