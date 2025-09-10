@@ -86,6 +86,7 @@ const Home = () => {
       <div className='line'></div>
       <div className='line'></div>
       <div className='line'></div>
+      <div className='line'></div>
       
 
 
